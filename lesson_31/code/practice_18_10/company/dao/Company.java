@@ -25,6 +25,16 @@ public interface Company {
     double totalSales(); // объем продаж
     void printEmployees();
 
+    // ---------
+    // список работников у которых отработано больше часов чем...
+    Employee[] findEmployeesHoursGreaterThan(int hours);
+
+
+    // список работников у которых ЗП в интревале (мин - макс)
+
+    Employee[] findEmployeesSalaryRange(int minSalary, int maxSalary);
+
+
 
 
 

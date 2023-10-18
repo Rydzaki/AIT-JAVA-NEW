@@ -22,8 +22,10 @@ public class CompanyImpl implements Company {
         if(employee == null || size == employees.length || findEmployee(employee.getId()) != null) {
             return false;
         }
-        employees[size] = employee;
-        size++;
+//        employees[size] = employee;
+//        size++;
+          employees[size++] = employee; // постфиксная операция
+
         return true;
     }
 
@@ -32,9 +34,14 @@ public class CompanyImpl implements Company {
         for (int i = 0; i < size; i++) {
             if (employees[i].getId() == id){
                 Employee victim = employees[i]; // убрали найденный элемент в переменную
-                employees[i] = employees[size - 1]; //на место найденного поставили последнего заполненного сотрудника
-                employees[size -1] = null; //обнулили последнего
-                size --;
+//                employees[i] = employees[size - 1]; //на место найденного поставили последнего заполненного сотрудника
+//                employees[size -1] = null; //обнулили последнего
+//                size --;
+                  employees[i] = employees[--size]; //префиксная операция [size -1] и уменьшая size на 1
+                  employees[size] = null;
+
+
+
                 return victim;
             }
         }
@@ -93,6 +100,47 @@ public class CompanyImpl implements Company {
             System.out.println(employees[i]);
         }
 
+    }
+//Для выборки элементов из массива, удовлетворяющих заданному условию, надо:
+//- сначала подсчитать количество элементов массива, удовлетворяющих условию.
+//- потом создать массив под это количество,
+//- и только потом его заполнить.
+
+    @Override
+    public Employee[] findEmployeesHoursGreaterThan(int hours) {
+        // считаем стколько будет элементов массива удовлетворяющих условиям
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getHours() > hours){
+                count++;
+
+            }
+        }
+        Employee[] res = new Employee[count]; // создаем массив размером каунт и заполняем
+        for (int i = 0, j = 0; j < res.length; i++) {
+            if (employees[i].getHours() > hours){
+                res[j++] = employees[i];
+            }
+        }
+        return res; // возвращаемый массив
+    }
+
+    @Override
+    public Employee[] findEmployeesSalaryRange(int minSalary, int maxSalary) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (employees[i].calcSalary() > minSalary && employees[i].calcSalary() < maxSalary){
+                count++;
+            }
+        }
+        Employee[] res = new Employee[count]; // создаем массив размером каунт и заполняем
+        for (int i = 0, j = 0; j < res.length; i++) {
+            if (employees[i].calcSalary() > minSalary && employees[i].calcSalary() < maxSalary){
+                res[j++] = employees[i];
+            }
+        }
+
+        return res;
     }
 
 }
