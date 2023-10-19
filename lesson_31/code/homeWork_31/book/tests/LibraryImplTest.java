@@ -25,6 +25,11 @@ class LibraryImplTest {
             library.addBook(b[i]);
         }
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> github/master
     @Test
     void addBook() {
         assertFalse(library.addBook(null)); // не можем добавить null
