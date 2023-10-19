@@ -54,24 +54,6 @@ public class LibraryImpl implements Library {
         return totalSize;
     }
 
-<<<<<<< HEAD
-//    @Override
-//    public void printAllBooks(Object object) {
-//        for (int i = 0; i < totalSize; i++) {
-//            System.out.println(books[i]);
-//        }
-//
-//    }
-=======
-    @Override
-    public void printAllBooks(Object object) {
-        for (int i = 0; i < totalSize; i++) {
-            System.out.println(books[i]);
-        }
-
-    }
->>>>>>> github/master
-
     @Override
     public void printAllBooks() {
         for (int i = 0; i < totalSize; i++) {
