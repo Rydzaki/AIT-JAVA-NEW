@@ -111,6 +111,5 @@ class CompanyImplTest {
         System.out.println("----------------------------");
         System.out.println(Arrays.toString(actual));
 
-        return;
     }
 }
