@@ -6,6 +6,8 @@ import homeWork_31.book.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryImplTest {
@@ -16,7 +18,7 @@ class LibraryImplTest {
     @BeforeEach
     void setUp() {
         library = new LibraryImpl(5);
-        b = new Book[4];
+        b = new Book[5];
         b[0] = new Book(101, "Michael Brooks", "World War Z", 2006);
         b[1] = new Book(102, "Karl Heinrich Marx", "Das Kapital", 1867);
         b[2] = new Book(103, "Kathy Sierra", "Head First Java", 2003);
@@ -56,5 +58,13 @@ class LibraryImplTest {
     @Test
     void printAllBooks() {
         library.printAllBooks();
+    }
+
+    @Test
+    void findAuthorTest(){
+        Book book3 = new Book(107, "Friedrich Hegel", "Encyclopedia of Philosophical Sciences", 1817);
+        library.addBook(book3);
+        Book[] actual = library.findAuthor("Friedrich Hegel");
+        Book[] expected = {b[3], b[4]};
     }
 }

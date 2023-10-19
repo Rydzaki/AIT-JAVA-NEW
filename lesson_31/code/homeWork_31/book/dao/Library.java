@@ -13,4 +13,6 @@ public interface Library {
     int quantity();
 
     void printAllBooks();
+
+    Book[] findAuthor(String author);
 }
