@@ -18,24 +18,40 @@ public class DateSortTest {
         comparator = (s1, s2) -> {
             String[] str1 = s1.split("-");
             String[] str2 = s2.split("-");
-            Integer years1 = Integer.parseInt(str1[2]);
-            Integer years2 = Integer.parseInt(str2[2]);
-            int res = years1.compareTo(years2);
-            if (res != 0) {
-                return res;
-            }
-            Integer mon1 = Integer.parseInt(str1[1]);
-            Integer mon2 = Integer.parseInt(str2[1]);
-            int res2 = mon1.compareTo(mon2);
-            if (res2 != 0) {
-                return res2;
-            }
-            Integer day1 = Integer.parseInt(str1[0]);
-            Integer day2 = Integer.parseInt(str2[0]);
-            int res3 = day1.compareTo(day2);
-            if (res3 != 0) {
+                for (int i = str1.length - 1; i >= 0; i-- ) {
+//                    int d1 = Integer.parseInt(str1[i]);
+//                    int d2 = Integer.parseInt(str2[i]);
+                    int res = str1[i].compareTo(str2[i]);
 
-                return res3;
+                    if (res !=0)
+                        return res;
+
+//                if (d1 > d2) {
+//                    return 1;
+//                }
+//                if (d1 < d2) {
+//                    return -1;
+//                }
+//            }
+////            return 0;
+//            Integer years1 = Integer.parseInt(str1[2]);
+//            Integer years2 = Integer.parseInt(str2[2]);
+//            int res = years1.compareTo(years2);
+//            if (res != 0) {
+//                return res;
+//            }
+//            Integer mon1 = Integer.parseInt(str1[1]);
+//            Integer mon2 = Integer.parseInt(str2[1]);
+//            int res2 = mon1.compareTo(mon2);
+//            if (res2 != 0) {
+//                return res2;
+//            }
+//            Integer day1 = Integer.parseInt(str1[0]);
+//            Integer day2 = Integer.parseInt(str2[0]);
+//            int res3 = day1.compareTo(day2);
+//            if (res3 != 0) {
+//
+//                return res3;
             }
             return 0;
         };
