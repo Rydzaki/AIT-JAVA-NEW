@@ -14,10 +14,13 @@ public class ToDoListImpl implements ToDoList {
     }
     @Override
     public boolean addNote(Task task) {
-        if(task == null || size == tasks.length || findTask(task.getId()) !=null ){
+        if(task == null || size == tasks.length || findTask(task.getId()) != null ){
+            return false;
 
         }
-        return false;
+        tasks[size] = task;
+        size++;
+        return true;
     }
 
     @Override
@@ -37,11 +40,9 @@ public class ToDoListImpl implements ToDoList {
                 tasks[i] = tasks[size - 1]; //поставили на место найденного последний
                 tasks[size - 1] = null; // затерли
                 size --;
-
-                Arrays.sort(tasks);
                 return v;
             }
-
+            Arrays.sort(tasks);
         }
         return null;
     }
@@ -64,5 +65,13 @@ public class ToDoListImpl implements ToDoList {
 
     public int quantity() {
         return size;
+    }
+
+    public void printTasks() {
+        // for loop, print tasks
+        for (int i = 0; i < size; i++) {
+            System.out.println(tasks[i]);
+        }
+        System.out.println("You have " + size + " tasks.");
     }
 }

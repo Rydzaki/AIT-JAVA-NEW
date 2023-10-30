@@ -34,11 +34,15 @@ public class ToDoListAppl {
                     break;
                 }
                 case 2 : {
-                    Task[] tasksAll = new Task[toDoList.quantity()];
-                    System.arraycopy(toDoList, 0, tasksAll, 0, toDoList.quantity());
-                    toDoList.seeAllPosts(tasksAll);
+                    System.out.println("Your tasks: ");
+                    toDoList.printTasks();
+
+
+//                    Task[] tasksAll = new Task[toDoList.quantity()];
+//                    System.arraycopy(toDoList, 0, tasksAll, 0, toDoList.quantity());
+//                    toDoList.seeAllPosts(tasksAll);
                     break;
-                    // TODO не выводит все задачи
+                    //TODO не выводит все задачи
                 }
                 case 3 :{
                     System.out.println("Enter the task ID to delete: ");
