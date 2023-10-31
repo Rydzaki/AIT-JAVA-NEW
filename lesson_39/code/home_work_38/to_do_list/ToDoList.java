@@ -34,5 +34,7 @@ public enum ToDoList {
         for (int i = 0; i < toDoLists.length; i++) {
             System.out.println(toDoLists[i].getNumber() + " - " + toDoLists[i].getAction());
         }
+
+        // todo заменить на фор ич 34 строку
     }
 }

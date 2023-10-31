@@ -39,10 +39,9 @@ public class Task implements Comparable<Task> {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // todo поменит местами сначала номер потом ее текст
         return "Task{" +
-                "id=" + id +
-                ", task='" + task + '\'' +
+                "task='" + task + '\'' +
                 ", taskNumber=" + taskNumber +
                 '}';
     }
@@ -52,23 +51,18 @@ public class Task implements Comparable<Task> {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
 
-        Task task1 = (Task) object;
+        Task task = (Task) object;
 
-        if (id != task1.id) return false;
-        if (taskNumber != task1.taskNumber) return false;
-        return Objects.equals(task, task1.task);
+        return id == task.id;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (task != null ? task.hashCode() : 0);
-        result = 31 * result + taskNumber;
-        return result;
+        return id;
     }
 
     @Override
     public int compareTo(Task o) {
-        return Integer.compare(id, o.id);
+        return Integer.compare(taskNumber, o.taskNumber); //
     }
 }
