@@ -76,7 +76,7 @@ public class DateOperation {
         Arrays.sort(dateInt);
 
         for (int i = 0; i < dates.length; i++) {
-            dates[i] = originalDates[i];
+            dates[i] = String.valueOf(dateInt[i]);
             }
         Arrays.sort(dates);
         System.out.println(Arrays.toString(dates));
