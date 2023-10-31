@@ -6,7 +6,7 @@ public interface ToDoList {
 
     boolean addNote (Task task);
     void seeAllPosts(Task[] tasks);
-    Task deleteEntry (int id);
+    Task deleteEntry (int taskNumber);
     void goOut ();
 
 }
