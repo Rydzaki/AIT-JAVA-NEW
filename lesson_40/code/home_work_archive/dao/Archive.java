@@ -13,4 +13,5 @@ public interface Archive {
     Document[] getDocumentsBetweenDate(LocalDate dateFrom, LocalDate dateTo);
     int size();
 
+    Document findDocument(int documentId, int folderId);
 }

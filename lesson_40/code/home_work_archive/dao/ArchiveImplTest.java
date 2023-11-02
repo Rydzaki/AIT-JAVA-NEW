@@ -16,7 +16,7 @@ class ArchiveImplTest {
 
     @BeforeEach
     void setUp() {
-        archive = new ArchiveImpl(7);
+        archive = new ArchiveImpl(8);
         doc = new Document[7];
         doc[0] = new Document(1, 1, "Report1", "www.report.com ", now);
         doc[1] = new Document(1, 2, "Report2", "www.report.com ", now);
@@ -35,13 +35,16 @@ class ArchiveImplTest {
         assertFalse(archive.addDocument(null));
         assertFalse(archive.addDocument(doc[1]));
 
-        Document document = new Document(3, 3, "test", "www.test.com", now);
-        assertTrue(archive.addDocument(document));
+        Document document1 = new Document(4, 1, "test", "www.test.com", now);
+        //Document document1 = null;
+        assertTrue(archive.addDocument(document1));
 
         assertEquals(7, archive.size());
 
-        Document document1 = new Document(3, 4, "test1", "www.test.com", now);
-        assertFalse(archive.addDocument(document1));
+        Document document2 = new Document(3, 4, "test1", "www.test.com", now);
+        assertFalse(archive.addDocument(document2));
+
+        printArr(doc);
     }
 
     @Test
@@ -54,6 +57,7 @@ class ArchiveImplTest {
 
     @Test
     void getAllDocumentsFromArchive() {
+
     }
 
     @Test
@@ -64,5 +68,19 @@ class ArchiveImplTest {
     void size() {
 
         assertEquals(6, archive.size());
+    }
+
+    private void printArr (Object[] o) {
+        for (int i = 0; i <o.length ; i++) {
+            System.out.println(o[i]);
+
+        }
+    }
+
+    @Test
+    void findBook(){
+        assertEquals(doc[1], archive.findDocument(2, 1));
+        assertNull(archive.findDocument(4, 4));
+
     }
 }
