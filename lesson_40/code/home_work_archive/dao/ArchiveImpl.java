@@ -22,14 +22,14 @@ public class ArchiveImpl implements Archive {
 
     @Override
     public boolean addDocument(Document document) {
-        if (document == null || size == documents.length){
+        if (document == null || size == documents.length || (findDocument(document.getDocumentId(), document.getFolderId()) != null)) {
             return false;
-        }
-        for (int i = 0; i < size; i++) {
-            Document v = documents[i];
-            if(v.getFolderId() == document.getFolderId() && v.getDocumentId() == document.getDocumentId()){
-                return false;
-            }
+//        }
+//        for (int i = 0; i < size; i++) {
+//            Document v = documents[i];
+//            if(v.getFolderId() == document.getFolderId() && v.getDocumentId() == document.getDocumentId()){
+//                return false;
+//            }
         }
         documents[size] = document;
         size++;
@@ -61,8 +61,8 @@ public class ArchiveImpl implements Archive {
     public int size() {
         return size;
     }
-
-    public Document findDocument (int documentId, int folderId) {
+    @Override
+    public Document findDocument(int documentId, int folderId) {
 //        Document res = null;
         for (int i = 0; i < size; i++) {
             if (documents[i].getDocumentId() == documentId && documents[i].getFolderId() == folderId) {
