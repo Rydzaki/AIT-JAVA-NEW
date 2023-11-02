@@ -19,6 +19,8 @@ public class ToDoListImpl implements ToDoList {
 
         }
         tasks[size] = task;
+        // TODO сделать увеличение ID и порядкого номера
+        //task.setTaskNumber(+1);
         size++;
         return true;
     }
