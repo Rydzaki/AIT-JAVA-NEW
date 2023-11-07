@@ -13,27 +13,42 @@ public class ToDoListAppl {
 
         ToDoListImpl toDoList = new ToDoListImpl(4);
 
-        while (true){
-            ToDoList.printMenu(ToDoList.values());
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+        while (true) {
+            int choice;
+            try {
 
-            switch (choice){
-                case 1 : {
-                    System.out.print("Enter the task ID: ");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
+                ToDoList.printMenu(ToDoList.values());
+                choice = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Input error. Please repeat");
+                scanner.nextLine();
+                continue;
+            }
+
+            switch (choice) {
+                case 1: {
+//                   System.out.print("Enter the task ID: ");
+//                   int id = scanner.nextInt();
+//                   scanner.nextLine();
                     System.out.println("Enter the name of the task: ");
                     String task = scanner.nextLine();
-                    System.out.println("Enter the task number: ");
-                    int taskNumber = scanner.nextInt();
                     scanner.nextLine();
+                    int taskNumber;
+                    try {
 
-                    Task task1 = new Task(id, task, taskNumber);
+                        System.out.println("Enter the task number: ");
+                        taskNumber = scanner.nextInt();
+                        scanner.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Input error task number. Please repeat");
+                        continue;
+                    }
+
+                    Task task1 = new Task(task, taskNumber);
                     toDoList.addNote(task1); // добавили в библиотеку
                     break;
                 }
-                case 2 : {
+                case 2: {
                     System.out.println("Your tasks: ");
                     toDoList.printTasks();
 
@@ -42,15 +57,21 @@ public class ToDoListAppl {
 //                    System.arraycopy(toDoList, 0, tasksAll, 0, toDoList.quantity());
 //                    toDoList.seeAllPosts(tasksAll);
                     break;
-                    //TODO не выводит все задачи
+                    //DONE TODO не выводит все задачи
                 }
-                case 3 :{
+                case 3: {
+                    int idDel;
+                    try {
                     System.out.println("Enter the task ID to delete: ");
-                    int idDel = scanner.nextInt();
-                    Task delTask = toDoList.deleteEntry(idDel);
-                   break;
+                        idDel = scanner.nextInt();
+                    } catch (Exception e) {
+                        System.out.println("Input error ID. Please repeat");
+                        continue;
+                    }
+                    toDoList.deleteEntry(idDel);
+                    break;
                 }
-                case 4 : {
+                case 4: {
                     toDoList.goOut();
                     break;
                 }

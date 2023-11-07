@@ -8,8 +8,10 @@ public class Task implements Comparable<Task> {
     private String task;
     private int taskNumber;
 
-    public Task(int id, String task, int taskNumber) {
-        this.id = id; // todo увеличиваем id при создании задачи
+    private static int addId = 1; // переменная для начала отчета ID
+
+    public Task(String task, int taskNumber) {
+        this.id = addId++; // todo увеличиваем id при создании задачи
         this.task = task;
         this.taskNumber = taskNumber;
     }
@@ -39,9 +41,10 @@ public class Task implements Comparable<Task> {
     }
 
     @Override
-    public String toString() { // todo поменит местами сначала номер потом ее текст
+    public String toString() {
         return "Task{" +
-                "task='" + task + '\'' +
+                "id=" + id +
+                ", task='" + task + '\'' +
                 ", taskNumber=" + taskNumber +
                 '}';
     }

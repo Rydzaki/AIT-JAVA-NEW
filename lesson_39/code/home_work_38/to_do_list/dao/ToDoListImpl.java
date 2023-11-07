@@ -18,19 +18,21 @@ public class ToDoListImpl implements ToDoList {
             return false;
 
         }
+
+        //task.setId(size);
         tasks[size] = task;
-        // TODO сделать увеличение ID и порядкого номера
-        //task.setTaskNumber(+1);
+        //DONE  изменил конструктор
+
         size++;
         return true;
     }
 
     @Override
     public void seeAllPosts(Task[] tasks) {
-        Arrays.sort(tasks);
         for (int i = 0; i < tasks.length; i++) {
             System.out.println(tasks[i]);
         }
+        Arrays.sort(tasks); // теориетически можно и убрать, но пусть будет
 
     }
 
@@ -38,13 +40,15 @@ public class ToDoListImpl implements ToDoList {
     public Task deleteEntry(int id) {
         for (int i = 0; i < size; i++) {
             if(tasks[i].getId() == id){
-                Task v = tasks[i]; // убрали найденный элемент в переменную
-                tasks[i] = tasks[size - 1]; //поставили на место найденного последний
-                tasks[size - 1] = null; // затерли
-                size --;
-                return v;
-            }
-            Arrays.sort(tasks);
+//                Task v = tasks[i]; // убрали найденный элемент в переменную
+//                tasks[i] = tasks[size - 1]; //поставили на место найденного последний
+//                tasks[size - 1] = null; // затерли
+//                size --;
+//                return v;
+                System.arraycopy(tasks, i+1, tasks, i, size-1-i);
+                tasks[--size] = null;
+            } // сменил метод удаления (новый наползание массива) чтобы не сбивалась сортировка
+
         }
         return null;
     }
