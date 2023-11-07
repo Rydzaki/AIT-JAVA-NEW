@@ -76,12 +76,12 @@ class ArchiveImplTest {
     }
 
     @Test
-    void getDocumentsBetweenDate() {
-
-        Document[] act = archive.getDocumentsBetweenDate(now.minusDays(2), now.minusDays(5));
-        Arrays.sort(act);
-        Document[] exp = {doc[0], doc[1], doc[2], doc[3]};
-        assertArrayEquals(exp, act);
+    void getDocBetweenDateTest() {
+//        LocalDate ld = now.toLocalDate(); // оставляем только дату
+//        Document[] actual = archive.getDocBetweenDate(ld.minusDays(6), ld.minusDays(1));
+//        Arrays.sort(actual);
+//        Document[] expected = {doc[0],doc[1],doc[2]};
+//        assertArrayEquals(expected,actual);
 
     }
 

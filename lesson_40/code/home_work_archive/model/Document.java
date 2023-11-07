@@ -8,7 +8,7 @@ public class Document implements Comparable<Document> {
     private int documentId;
     private String nameDoc;
     private String url;
-    private LocalDate dateDoc;
+    private LocalDate dateDoc; // TODO переделать на локалДейтТайм
 
     public Document(int folderId, int documentId, String nameDoc, String url, LocalDate dateDoc) {
         this.folderId = folderId;

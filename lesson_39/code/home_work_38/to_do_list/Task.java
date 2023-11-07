@@ -9,7 +9,7 @@ public class Task implements Comparable<Task> {
     private int taskNumber;
 
     public Task(int id, String task, int taskNumber) {
-        this.id = id;
+        this.id = id; // todo увеличиваем id при создании задачи
         this.task = task;
         this.taskNumber = taskNumber;
     }

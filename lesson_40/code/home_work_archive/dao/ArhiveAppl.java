@@ -24,7 +24,7 @@ public class ArhiveAppl {
                 case 1 : {
                     System.out.println("Enter the ID of folder");
                     int idFolder = scanner.nextInt();
-                    scanner.nextLine();
+                    scanner.nextLine(); // преход на новую строку и ожидание ввода
                     System.out.println("Enter the ID of document");
                     int idDocument = scanner.nextInt();
                     scanner.nextLine();

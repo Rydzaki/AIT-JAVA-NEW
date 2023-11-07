@@ -13,5 +13,7 @@ public interface Archive {
     Document[] getDocumentsBetweenDate(LocalDate dateFrom, LocalDate dateTo);
     int size();
 
+    // TOdo void viewArchive(); // печать документов
+
    // Document findDocument(int documentId, int folderId);
 }

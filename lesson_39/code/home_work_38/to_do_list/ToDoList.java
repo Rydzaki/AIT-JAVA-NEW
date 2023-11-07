@@ -24,6 +24,10 @@ public enum ToDoList {
     public String getAction() {
         return action;
     }
+    void wievTask(){
+        //todo печать списка задач
+    }
+
 
     public void setAction(String action) {
         this.action = action;

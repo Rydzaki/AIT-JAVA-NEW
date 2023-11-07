@@ -3,23 +3,27 @@ package home_work_archive.dao;
 import home_work_archive.model.Document;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
 public class ArchiveImpl implements Archive {
 
-
+    // компоратор позволяет сортировать объекты типа Документ по дате потом по id документа
     static Comparator<Document>comparator = (d1, d2) -> {
         int res = d1.getDateDoc().compareTo(d2.getDateDoc());
         return res != 0 ? res : Integer.compare(d1.getDocumentId(), d2.getDocumentId());
     };
 
-    private Document[] documents;
-    private int size;
+    private Document[] documents; // хранение документов в массиве
+    private int size; // кол-во документов
 
+    // конструктор
     public ArchiveImpl(int capacity){
         documents = new Document[capacity];
+      //  this.size = 0;
     }
 
     @Override
@@ -62,10 +66,10 @@ public class ArchiveImpl implements Archive {
     @Override
     public Document[] getAllDocumentsFromArchive(int folderId) {
         return findByPredicate((p -> folderId == p.getFolderId()));
-    }
+    } //p.getFolderID() == folderId
 
-    private Document[] findByPredicate (Predicate<Document> predicate){
-        Document[]res = new Document[size];
+    private Document[] findByPredicate (Predicate<Document> predicate){ // возвращаем массив найденых объектов
+        Document[]res = new Document[size]; // объявили массив избыточной длинны
         int j = 0;
         for (int i = 0; i < size; i++) {
             if(predicate.test(documents[i])){
@@ -73,13 +77,21 @@ public class ArchiveImpl implements Archive {
 
             }
         }
-        return Arrays.copyOf(res, j);
+        return Arrays.copyOf(res, j); // скопировал массив на сам себя
 
     }
 
     @Override
-    public Document[] getDocumentsBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
-        return new Document[0];
+    public Document[] getDocumentsBetweenDate(LocalDate dateFrom, LocalDate dateTo) { // TODO дописать метод
+//        Document pattern = new Document(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());
+//        //ввели объектную переменную, шаблон
+//        int from = -Arrays.binarySearch(documents, 0, size, pattern, comparator) - 1;//находим индекс начального фото левый
+//        // край from = from>=0 ? from : -from-1;
+//        pattern = new Document(0, Integer.MAX_VALUE, null, null, LocalDateTime.of(dateTo, LocalTime.MAX));// находим правый край
+//        int to = -Arrays.binarySearch(documents, 0, size, pattern, comparator) - 1;
+        // to = to >=0 ? to : -to-1;
+        return null;
+                // Arrays.copyOfRange(documents, from, to);// диапазон, создаем новый массив с нужными документами
     }
 
     @Override
