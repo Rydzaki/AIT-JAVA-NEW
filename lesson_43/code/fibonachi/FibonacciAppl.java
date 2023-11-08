@@ -11,11 +11,10 @@ public class FibonacciAppl {
 
         Iterator<Integer> iterator = fibonacci.iterator();
         int sum = 0;
+        int sum1 = 0;
         while (iterator.hasNext()) {
             int f = iterator.next();
             System.out.print(f + " | ");
-
-
 
             // todo - распечатать первые 8 чисел из ряда
 
@@ -28,8 +27,15 @@ public class FibonacciAppl {
         System.out.println();
         System.out.println("Sum = " + sum);
 
+
+
+
         for (Integer integer: fibonacci){
             System.out.print(integer + " | ");
+            sum1 += integer;
+
         }
+        System.out.println();
+        System.out.print(sum);
     }
 }
