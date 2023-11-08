@@ -29,23 +29,16 @@ public class ToDoListAppl {
                 case 1: {
 //                   System.out.print("Enter the task ID: ");
 //                   int id = scanner.nextInt();
-//                   scanner.nextLine();
-                    System.out.println("Enter the name of the task: ");
-                    String task = scanner.nextLine();
                     scanner.nextLine();
-                    int taskNumber;
-                    try {
-
-                        System.out.println("Enter the task number: ");
-                        taskNumber = scanner.nextInt();
-                        scanner.nextLine();
-                    } catch (Exception e) {
-                        System.out.println("Input error task number. Please repeat");
-                        continue;
-                    }
-
+                    System.out.println("Enter the name of the task: ");
+                    String task = scanner.next();
+                    scanner.nextLine();
+                    System.out.println("Enter the task number: ");
+                    int taskNumber = scanner.nextInt();
+                    scanner.nextLine();
+                        //TODO не работает вывод сообщения (меню перескакивает)
                     Task task1 = new Task(task, taskNumber);
-                    toDoList.addNote(task1); // добавили в библиотеку
+                    toDoList.addNote(task1); // добавили в библиотint taskNumber;
                     break;
                 }
                 case 2: {
@@ -80,7 +73,5 @@ public class ToDoListAppl {
                     break;
             }
         }
-
-
     }
 }
