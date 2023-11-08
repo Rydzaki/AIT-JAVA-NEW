@@ -21,10 +21,10 @@ public class FibonacciIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        int res = current;
-        int nextNum = current + start;
-        start = current;
-        current = nextNum;
+        int res = current;  //1 ...1..2..3..5
+        int nextNum = current + start; //1 + 0...1+1..2+1..3+2
+        start = current; // заменю начальное занчение 0 на 1 ... ..1..2..3
+        current = nextNum; // current = 1+0.. 1+1..2+1..3+2
 
         return res; // todo как получить следующее числло в ряду (предыдущее плюс текущее)
 
