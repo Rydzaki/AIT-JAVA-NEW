@@ -31,8 +31,8 @@ public class ToDoListAppl {
 //                   int id = scanner.nextInt();
                     scanner.nextLine();
                     System.out.println("Enter the name of the task: ");
-                    String task = scanner.next();
-                    scanner.nextLine();
+                    String task = scanner.nextLine();
+                    //scanner.nextLine();
                     System.out.println("Enter the task number: ");
                     int taskNumber = scanner.nextInt();
                     scanner.nextLine();
