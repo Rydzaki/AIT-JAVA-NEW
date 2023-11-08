@@ -24,7 +24,7 @@ public class MyStringAppl {
 //        myString.addChar('!');
 //
 //        System.out.println(myString);
-//
+//for
 //        myString.removeChar('r');
 //        System.out.println(myString);
 //
