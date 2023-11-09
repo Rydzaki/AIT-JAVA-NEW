@@ -30,17 +30,17 @@ public class FibonacciIterator implements Iterator<Integer> {
 
     }
 
-    public int[] toMakeFibo(){
-
-        int[] arrFib = new int[size];
-        arrFib[0] = start;
-        arrFib[1] = current;
-
-        for (int i = 1; i < size; i++) {
-            arrFib[i] = arrFib[i] + arrFib[i-1];
-        }
-        return arrFib;
-    }
+//    public int[] toMakeFibo(){
+//
+//        int[] arrFib = new int[size];
+//        arrFib[0] = start;
+//        arrFib[1] = current;
+//
+//        for (int i = 1; i < size; i++) {
+//            arrFib[i] = arrFib[i] + arrFib[i-1];
+//        }
+//        return arrFib;
+//    }
 
 
 

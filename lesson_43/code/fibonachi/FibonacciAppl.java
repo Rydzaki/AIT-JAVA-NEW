@@ -7,7 +7,7 @@ public class FibonacciAppl {
     public static void main(String[] args) {
 
 
-        Fibonacchi fibonacci = new Fibonacchi(22);
+        Fibonacchi fibonacci = new Fibonacchi(21);
 
         Iterator<Integer> iterator = fibonacci.iterator();
         int sum = 0;
