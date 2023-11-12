@@ -16,7 +16,7 @@ public interface Ilist<E> extends Iterable<E> {
 
     boolean add(E element); // добавить элемент списка
 
-    default boolean contains(Object o) // есть ли элемент в списке
+    default boolean contains(E o) // есть ли элемент в списке
     {
         return indexOf(o) >= 0; // потому что ищем по индексу (-1 значит нет)
     }

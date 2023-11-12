@@ -141,8 +141,23 @@ public class IlistImpl<E> implements Ilist<E> {
 
 
     @Override
-    public int lastIndexOf(Object o) { // todo
-        return 0;
+    public int lastIndexOf(Object o) { // todo не находи первый слева элемент
+        if (o != null) { // когда объект не NULL
+            for (int i = size - 1; i > -1; i--) {
+                if (o.equals(elements[i])) {
+                    return i;
+                }
+            }
+        }
+        else { // когда в листе есть объект  null
+            for (int i = size - 1; i > -1; i--) {
+                if (null == (elements[i])) {
+                    return i;
+                }
+            }
+        }
+
+        return -1;
     }
 
     @Override
