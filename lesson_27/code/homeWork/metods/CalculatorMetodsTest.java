@@ -2,7 +2,6 @@ package homeWork.metods;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import practice.sentencies.Sentence;
 
 import static org.junit.jupiter.api.Assertions.*;
 

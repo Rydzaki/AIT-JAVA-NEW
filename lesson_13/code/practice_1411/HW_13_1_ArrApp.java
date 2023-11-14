@@ -1,8 +1,6 @@
 package practice_1411;
 
-import prictice.BubbleSortV2;
-
-public class ApplRendom {
+public class HW_13_1_ArrApp {
     public static void main(String[] args) {
         ArrayMethods.split();
 
@@ -30,28 +28,19 @@ public class ApplRendom {
 //                "six", "seven", "eight", "nine"};
 //        ArrayMethods.printArray(digits);
 
-//        int [] number3 = HW_13_ArrMethod.randomArray10(-20, 10);
-//        HW_13_ArrMethod.split();
-//
-//        int min = HW_13_ArrMethod.minArray(number3);
-//        System.out.println("Minimum = " + min);
-//        HW_13_ArrMethod.split();
-//
-//        int minIndex = HW_13_ArrMethod.minArrayIndex(number3);
-//        System.out.println("Mim index = "+ minIndex);
-//        HW_13_ArrMethod.split();
-//
-//        HW_13_ArrMethod.sortArrayAsc(number3);
-//        HW_13_ArrMethod.printArray(number3);
+        int [] number3 = HW_13_ArrMethod.randomArray10(-20, 10);
+        HW_13_ArrMethod.split();
 
-        int[] array = {-12, 5, 36, 28, -16, 100, 82, 63, 57, 5};
-        BubbleSortV2.printArray(array); // печать до сортировки
-        BubbleSortV2.bubbleSort(array); // делаем сортировку
-        BubbleSortV2.printArray(array); // печать после сортировки
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i%2]);
+        int min = HW_13_ArrMethod.minArray(number3);
+        System.out.println("Minimum = " + min);
+        HW_13_ArrMethod.split();
 
-        }
+        int minIndex = HW_13_ArrMethod.minArrayIndex(number3);
+        System.out.println("Mim index = "+ minIndex);
+        HW_13_ArrMethod.split();
+
+        HW_13_ArrMethod.sortArrayAsc(number3);
+        HW_13_ArrMethod.printArray(number3);
 
 
     }
