@@ -99,4 +99,12 @@ class PlanetsSortByNames implements Comparator<Planet> {
         return o1.getName().compareTo(o2.getName());
     }
 }
+abstract class PlanetsSort implements Comparable<Planet>{
+
+    @Override
+    public int compareTo(Planet o) {
+
+        return 0;
+    }
+}
 
