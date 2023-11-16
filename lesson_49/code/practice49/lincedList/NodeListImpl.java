@@ -1,4 +1,4 @@
-package practice.lincedList;
+package practice49.lincedList;
 
 import java.util.Iterator;
 
@@ -89,31 +89,87 @@ public class NodeListImpl<E> implements NodeList<E> {
 
     @Override
     public E get(int index) {
-        return null;
+        Node<E> node = getNodeByIndex(index);
+        return node.data;
     }
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        int index = 0; // Начальный индекс, который будем увеличивать при проходе по узлам списка
+        if (o != null) { // Если объект, который мы ищем, не является null
+            for (Node<E> node = first; node != null; node = node.next, index++) {
+                // Начиная с первого узла (first), идем по списку узлов до конца (node != null)
+                // на каждом шаге переходим к следующему узлу (node = node.next)
+                if (o.equals(node.data)) { // Сравниваем объект, который мы ищем (o), с данными текущего узла
+                    return index; // Если объект найден, возвращаем его индекс
+                }
+            }
+        } else {
+            for (Node<E> node = first; node != null; node = node.next, index++) {
+                // То же самое, что и выше, но в этом случае ищем null в списке
+                if (o == node.data) { // Сравниваем объект с данными текущего узла, используя ==
+                    return index; // Если null найден, возвращаем его индекс
+                }
+            }
+        }
+        return -1; // Если объект не найден в списке, возвращаем -1
     }
 
     @Override
     public int lstIndexOf(Object o) {
-        return 0;
+        return 0; // TODO развернуть проход по индексу
     }
 
     @Override
     public E remove(int index) {
-        return null;
+        Node<E> node = getNodeByIndex(index);
+        return unlink(node);
+    }
+
+    private E unlink(Node<E> node) {
+        E victim = node.data;
+        Node<E> prev = node.prev;
+        Node<E> next = node.next;
+        if (prev != null) {
+            prev.next = next;
+            node.prev = null;
+        } else {
+            first = next;
+        }
+        if (next != null) {
+            next.prev = prev;
+            node.next = null;
+        } else {
+            last = prev;
+        }
+        node.data = null;
+        size--;
+        return victim;
     }
 
     @Override
     public E set(int index, E element) {
-        return null;
+        Node<E> node = getNodeByIndex(index); // нашли узел по индексу
+        E victim = node.data;
+        node.data = element; // обновили данные
+        return victim;
     }
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+
+        return new Iterator<E>() {
+            Node<E> cur = first;
+            @Override
+            public boolean hasNext() {
+                return cur != null;
+            }
+            @Override
+            public E next() {
+                E date = cur.data;
+                cur = cur.next;
+                return date;
+            }
+        };
     }
 }

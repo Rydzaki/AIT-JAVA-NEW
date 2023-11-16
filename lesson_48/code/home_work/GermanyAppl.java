@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class GermanyAppl {
     public static void main(String[] args) {
 
-        LinkedList germany = new LinkedList<>();
+        LinkedList<String> germany = new LinkedList<>();
 
         germany.add("Berlin");
         germany.add("Munich");
@@ -28,6 +28,7 @@ public class GermanyAppl {
         System.out.println();
 
         int index = 3;
+        germany.addLast("Humburg");
         germany.remove("Humburg");
         germany.add(index, "Humburg");
         System.out.println("=============" + "Humburg on the "+ index+ "rd index" + "===============");
