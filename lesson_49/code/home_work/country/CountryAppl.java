@@ -2,11 +2,12 @@ package home_work.country;
 
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class CountryAppl {
     public static void main(String[] args) {
 
-        LinkedList<Country> countries = new LinkedList<>();
+        List<Country> countries = new LinkedList<>();
 
         countries.add(new Country("United States ", 333.29, "North America"));
         countries.add(new Country("Mexico", 126.0, "North America"));
@@ -26,7 +27,7 @@ public class CountryAppl {
             System.out.println(c + "|");
         }
         System.out.println("====================Sort by name======================");
-        countries.sort(Country::compareTo);
+        countries.sort(Country::compareTo); // вызов сортировки с методом compareTo который прописан в классе
         for (Country c :countries) {
             System.out.println(c + "|");
         }

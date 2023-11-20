@@ -83,8 +83,8 @@ class CountryBySortRevers implements Comparator<Country>{
 class CountryBySortContinentPopulation implements Comparator<Country>{
     @Override
     public int compare(Country o1, Country o2) {
-        int continentSort = o1.getContinent().compareTo(o2.getContinent());
+        int continentSort = o1.getContinent().compareTo(o2.getContinent()); // compareTo - это для стрингов
 
-        return continentSort != 0 ? continentSort : -Double.compare(o1.getPopulation() , o2.getPopulation());
+        return continentSort != 0 ? continentSort : -Double.compare(o1.getPopulation(), o2.getPopulation());
     }
 }
