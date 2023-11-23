@@ -52,6 +52,8 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_50/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_51/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_52/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_53_Citizens/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_54_UML/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
