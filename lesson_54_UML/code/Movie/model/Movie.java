@@ -4,17 +4,17 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.Objects;
 
-public class Movie implements Comparable<Movie> {
+public class Movie {
     private long imdb;
     private String title;
     private String director;
     private String genre;
     private LocalDate date;
 
-    public Movie(long imdb, String title, String direcor, String genre, LocalDate date) {
+    public Movie(long imdb, String title, String director, String genre, LocalDate date) {
         this.imdb = imdb;
         this.title = title;
-        this.director = direcor;
+        this.director = director;
         this.genre = genre;
         this.date = date;
     }
@@ -67,8 +67,8 @@ public class Movie implements Comparable<Movie> {
         return Objects.hash(imdb);
     }
 
-    @Override
-    public int compareTo(Movie o) {
-        return Long.compare(this.imdb, o.getImdb());
-    }
+//    @Override
+//    public int compareTo(Movie o) {
+//        return Long.compare(this.imdb, o.getImdb());
+//    }
 }
