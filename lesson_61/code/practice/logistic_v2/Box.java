@@ -29,7 +29,7 @@ public class Box implements Iterable<Parcel>{
 
     @Override
     public String toString() {
-        return "Box with parcels: " + parcels;
+        return "Box with parcels: "; //+ parcels;
     }
 
     @Override

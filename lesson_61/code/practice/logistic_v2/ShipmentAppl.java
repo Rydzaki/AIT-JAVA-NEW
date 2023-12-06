@@ -16,8 +16,7 @@ public class ShipmentAppl {
     private static final int MIN_PARCELS = 5;
     private static final int MAX_PARCELS = 10;
     private static final double MIN_WEIGHT = 1.0;  // Заменено на числовые значения
-    private static final double MAX_WEIGHT = 5.0;
-
+    private static final double MAX_WEIGHT = 2.0;
     private static Random random = new Random();
 
     public static void main(String[] args) {
@@ -97,7 +96,6 @@ public class ShipmentAppl {
             totalParcels += container.countParcels();
             totalWeight += container.weightContainer();
         }
-
         System.out.println("Общее количество посылок: " + totalParcels);
         System.out.println("Общий вес посылок: " + totalWeight);
     }

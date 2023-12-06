@@ -18,10 +18,6 @@ public class Container implements Iterable<Box>{
         return label;
     }
 
-    public List<Box> getListBoxes() {
-        return listBoxes;
-    }
-
     // в контейнер надо будет добавить задуманное число коробок с посылками
     // этот метод добавляет коробку в список коробок, который есть в контейнере
     public boolean addBox(Box box){
