@@ -3,11 +3,9 @@ package Movie.dao;
 import Movie.model.Movie;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
-import java.util.concurrent.locks.Lock;
 
-public class MoviesCollectionImps implements MoviesCollection {
+public class MoviesCollectionImps<M> implements MoviesCollection {
     private List <Movie> moviesList;
 
     public MoviesCollectionImps() {
@@ -26,7 +24,7 @@ public class MoviesCollectionImps implements MoviesCollection {
         if(movie == null){
             return false;
         }
-        if(moviesList.contains(movie)){
+        if(moviesList.contains(movie)){ // проверка на дубликат
             return false;
         }
         moviesList.add(movie);

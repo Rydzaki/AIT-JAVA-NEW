@@ -3,7 +3,6 @@ package Movie.tests;
 import Movie.dao.MoviesCollection;
 import Movie.dao.MoviesCollectionImps;
 import Movie.model.Movie;
-import home_work.citizens.model.Person;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ class MoviesCollectionImpsTest {
 
     @BeforeEach
     void setUp() {
-        moviesCollection = new MoviesCollectionImps(List.of(
+        moviesCollection = new MoviesCollectionImps<>(List.of(
                 new Movie(1, "A", "A", "A", now.minusYears(1)),
                 new Movie(2, "B", "B", "B", now.minusYears(2)),
                 new Movie(3, "C", "C", "C", now.minusYears(3)),

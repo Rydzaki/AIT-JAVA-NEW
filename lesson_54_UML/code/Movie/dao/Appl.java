@@ -10,7 +10,7 @@ public class Appl {
     public static void main(String[] args) {
         MoviesCollection moviesCollection;
 
-        moviesCollection = new MoviesCollectionImps(List.of(
+        moviesCollection = new MoviesCollectionImps<Movie>(List.of(
                 new Movie(1, "A", "A", "A", LocalDate.now().minusYears(1)),
                 new Movie(2, "B", "B", "B", LocalDate.now().minusYears(2)),
                 new Movie(3, "C", "C", "C", LocalDate.now().minusYears(3)),
