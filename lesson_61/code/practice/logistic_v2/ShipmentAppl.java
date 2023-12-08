@@ -39,6 +39,7 @@ public class ShipmentAppl {
             });
         });
 
+
         calculateTotalParcelsAndWeight(containers);
 
         // Находим и выводим все контейнеры с максимальным количеством посылок
@@ -49,6 +50,8 @@ public class ShipmentAppl {
             int parcelCount = container.countParcels(); // Фактическое количество посылок
             System.out.println(container.getLabel() + ": " + parcelCount);
         });
+
+
     }
 
     // создание случайного контейнера
@@ -110,4 +113,6 @@ public class ShipmentAppl {
                 .filter(container -> container.countParcels() == maxParcels)
                 .collect(Collectors.toList());
     }
+
+
 }
