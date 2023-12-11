@@ -6,8 +6,7 @@ import home_work.library_reviews.model.Book;
 import home_work.library_reviews.model.Review2;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class LibRevAppl {
     public static void main(String[] args) {
@@ -36,6 +35,8 @@ public class LibRevAppl {
 
         System.out.println("\t Authors by like count:");
         listReviews.getAuthorsByLikeCount();
+
+        //todo сделать enum and menu
 
 
     }

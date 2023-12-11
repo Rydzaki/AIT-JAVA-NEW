@@ -88,13 +88,13 @@ public class Review2 implements Comparable<Review2> {
         }
     }
 
-    public void addLike(String userName) {
-        likedBy.add(userName);
-    }
-
-    public void removeLike(String userName) {
-        likedBy.remove(userName);
-    }
+//    public void addLike(String userName) {
+//        likedBy.add(userName);
+//    }
+//
+//    public void removeLike(String userName) {
+//        likedBy.remove(userName);
+//    }
 
     public int getLikeCount() {
         return likedBy.size();
