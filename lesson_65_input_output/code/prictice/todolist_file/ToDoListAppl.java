@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.List;
 import java.util.Scanner;
 
 public class ToDoListAppl {
@@ -56,14 +57,16 @@ public class ToDoListAppl {
                 case 4:{
                     System.out.println("Saving");
                     // todo
+                    List<Task> tasks = toDoList.gerAllTasks();
                     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./dest/todoList.dat"))) {
-                        oos.writeObject(toDoList); // отправили весь хешсет в файл
+                        oos.writeObject(tasks); // отправили весь хешсет в файл
 
                     } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
+                    break;
                 }
 
                 case 5:

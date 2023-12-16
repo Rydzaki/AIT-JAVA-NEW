@@ -57,6 +57,12 @@ public class ToDoListImpl implements Serializable, ToDoList {
     }
 
     @Override
+    public List <Task> gerAllTasks() {
+        return tasks.stream().toList();
+    }
+
+
+    @Override
     public int quantity() {
         return quantity;
     }

@@ -65,6 +65,10 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_63_library/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_64/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_65_input_output/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_65_x_file/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_66_multi/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_67/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_68/code" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/lesson_55/code/home_work_55/company2" />
     </content>
     <orderEntry type="inheritedJdk" />
