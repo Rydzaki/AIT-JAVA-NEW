@@ -3,8 +3,11 @@ package homeWork;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
+=======
+>>>>>>> origin/master
 
 public class CompareFileAppl {
 
@@ -42,10 +45,14 @@ public class CompareFileAppl {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+<<<<<<< HEAD
         for (String arg: args) {
 
         }
 
         }
+=======
+    }
+>>>>>>> origin/master
 }
 

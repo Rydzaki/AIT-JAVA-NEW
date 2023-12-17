@@ -30,9 +30,42 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_27/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_28/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_29/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/lesson_30/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/lesson_31/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_32/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_33/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_34/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_35/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_36/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_37/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_38/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_39/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_40/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_41_album/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_43_2_GIT/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_42_Exception/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_43/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_44/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_45/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_46/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_47/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_48/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_49/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_50/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_51/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_52/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_53_Citizens/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_54_UML/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_55/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_56_phonebook/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_57_map/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_58/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_59_strim/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_60/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_61/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_62/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_63_library/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_64/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_65_input_output/code" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson_55/code/home_work_55/company2" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -68,5 +101,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
