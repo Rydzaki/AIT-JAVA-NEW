@@ -43,9 +43,9 @@ public class CompareFileAppl {
             throw new RuntimeException(e);
         }
         for (String arg: args) {
-            
+
         }
-            
+
         }
 }
 
