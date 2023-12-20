@@ -16,13 +16,14 @@ public class Test {
         }
         System.out.println("\n============Binary Search=======================");
 
-        int target = 76;
+        int target = 100;
         int result = binarySearch(arr, target);
 
-        if(result == -1){
-            System.out.println("Искомый элемент не найден");
+        if(result >= 0){
+            System.out.println("Искомый элемент найден под индексом: "+ result);
         } else {
-            System.out.println("Искомый элемент найден под индексом: "+ result);}
+            int reversResult = -result -1;
+            System.out.println("Искомый элемент не найден. Вставить его нужно под индексом: "+ reversResult);}
     }
 
     private static int binarySearch(int[] arr, int target) {
@@ -43,7 +44,7 @@ public class Test {
                 end = middle -1; // искомое значение слева
             }
         }
-        return -1; // вернуть -1 если элемент не найден
+        return -(start + 1); // вернуть -1 если элемент не найден
     }
 
     private static void bubblesort(int[] arr) {

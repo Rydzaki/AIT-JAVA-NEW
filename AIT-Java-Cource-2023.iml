@@ -67,6 +67,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_68/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_69/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_70/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Xproject/code" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/lesson_55/code/home_work_55/company2" />
     </content>
     <orderEntry type="inheritedJdk" />
