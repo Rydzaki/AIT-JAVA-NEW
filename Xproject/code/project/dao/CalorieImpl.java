@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class CalorieImpl {
+public class CalorieImpl implements Calorie {
 
     private List <Product> products;
     private LocalDate date;
@@ -18,6 +18,7 @@ public class CalorieImpl {
         this.date = date;
     }
 
+    @Override
     public static List <Product> readProductsFromCSV() {
         List <Product> productList = new ArrayList <>();
 
@@ -40,7 +41,7 @@ public class CalorieImpl {
         return productList;
     }
 
-
+    @Override
     public static void saveFood(List<Product> products) {
         String filePath = "./saved_food.txt";
 
